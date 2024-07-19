@@ -1,0 +1,32 @@
+[22,27,16,2,18,6] -> Insertion Sort
+
+22 | 27, 16, 2, 18, 6    
+22, 27 | 16, 2, 18, 6    --> 1 (n-5) numbers to compare
+16, 22, 27 | 2, 18, 6    --> 2 (n-4) numbers to compare
+2, 16, 22, 27 | 18, 6    --> 3 (n-3) numbers to compare
+2, 16, 18, 22, 27 | 6    --> 4 (n-2) numbers to compare
+2, 6, 16, 18, 22, 27     --> 5 (n-1) numbers to compare
+
+1+2+3+4+5 = (n-5)+(n-4)+(n-3)+(n-2)+(n-1) = (n-1)*n/2 = (n²-n)/2 therefore O(n²) for Insertion Sort
+
+Since 18 is the 4th element out of 6, one could say that it is an average case.
+
+
+
+[7,3,5,8,2,9,4,15,6] -> Selection Sort
+
+Step 1: Find the smallest element : 2 
+		Sorted Array: [2]
+		Unsorted Array Remained: [7, 3, 5, 8, 9, 4, 15, 6]
+
+Step 2: Find the smallest element : 3
+		Sorted Array: [2, 3]
+		Unsorted Array Remained: [7, 5, 8, 9, 4, 15, 6]
+
+Step 3: Find the smallest element : 4 
+		Sorted Array: [2, 3, 4]
+		Unsorted Array Remained: [7, 5, 8, 9, 15, 6]
+
+Step 4: Find the smallest element : 5
+		Sorted Array: [2, 3, 4, 5]
+		Unsorted Array Remained: [7, 8, 9, 15, 6]
